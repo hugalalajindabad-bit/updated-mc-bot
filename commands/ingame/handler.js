@@ -12,7 +12,7 @@ for (const file of fs.readdirSync(commandDir).filter(name => name.endsWith('.js'
 }
 function handleIngameCommand(bot, username, message) {
   if (typeof message === 'string' && message.trim().startsWith("prefix")) {
-    return bot.chat("My prefix is '?'");
+    return bot.chat("My prefix is '!'");
   };
   if (typeof message !== 'string' || !message.startsWith('!')) return;
   const parts = message.slice(1).trim().split(/\s+/);
