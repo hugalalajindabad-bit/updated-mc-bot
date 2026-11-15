@@ -30,7 +30,7 @@ function getServerData(bot) {
   const weather = bot.thunderState > 0.5 ? 'thunder' : bot.isRaining ? 'rain' : 'clear';
   return {
     online: Boolean(bot.player), playerCount: players.length, maxPlayers: 50,
-    ping: bot._client?.latency ?? -1, players,
+    ping: bot.player?.ping ?? -1, players,
     environment: { time, weather }
   };
 }
