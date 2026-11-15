@@ -11,6 +11,9 @@ for (const file of fs.readdirSync(commandDir).filter(name => name.endsWith('.js'
   commands.set(command.name.toLowerCase(), command);
 }
 function handleIngameCommand(bot, username, message) {
+  if (typeof message === 'string' && message.trim().startsWith("prefix")) {
+    return bot.chat("My prefix is '?'");
+  };
   if (typeof message !== 'string' || !message.startsWith('!')) return;
   const parts = message.slice(1).trim().split(/\s+/);
   const name = (parts.shift() || '').toLowerCase();
