@@ -17,6 +17,7 @@ function handleIngameCommand(bot, username, message) {
   if (!name) return;
   const command = commands.get(name);
   if (!command) return;
+  console.log(username);
   if (command.allowList === true && !ALLOWED_PLAYERS.some(player => player.toLowerCase() === username.toLowerCase())) return;
   if (command.allowList !== true && command.allowList !== false) { console.error(`[COMMAND] ${name}: allowList must be true or false.`); return; }
   try { Promise.resolve(command.execute(bot, username, parts)).catch(error => console.error(`[COMMAND] ${name}`, error)); }
