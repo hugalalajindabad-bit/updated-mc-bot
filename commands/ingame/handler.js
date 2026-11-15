@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Edit this one list to manage all commands with allowList: true.
-const ALLOWED_PLAYERS = ['SUJOY8534', 'max_vc_22'];
+const ALLOWED_PLAYERS = ['.SUJOY8534'];
 const commands = new Map();
 const commandDir = path.join(__dirname, 'minecraft');
 for (const file of fs.readdirSync(commandDir).filter(name => name.endsWith('.js'))) {
