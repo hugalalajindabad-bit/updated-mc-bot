@@ -1,0 +1,1 @@
+module.exports = { name: 'say', description: 'Send a Minecraft chat message', execute: ({ manager, args }) => args.length ? manager.sendChat(args.join(' ')) : ({ success: false, message: 'Usage: !say <message>' }) };

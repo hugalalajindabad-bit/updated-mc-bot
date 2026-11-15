@@ -1,0 +1,1 @@
+module.exports = { name: 'status', description: 'Show bot connection status', execute: ({ manager }) => ({ success: true, message: manager.getState().online ? 'Bot is connected.' : manager.getState().connecting ? 'Bot is connecting.' : 'Bot is disconnected.' }) };

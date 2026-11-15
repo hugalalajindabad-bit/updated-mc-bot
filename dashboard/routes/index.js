@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/dashboard');
+router.get('/', controller.home);
+router.get('/chat', controller.home);
+router.get('/health', (req, res) => res.status(200).send('Bot service is running'));
+router.get('/api/chat/messages', controller.messages);
+router.post('/api/chat/send', controller.send);
+router.get('/api/chat/status', controller.status);
+module.exports = router;

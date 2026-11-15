@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title><link rel="stylesheet" href="/public/css/dashboard.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="header"><div><h1>🤖 Minecraft Bot</h1><p>Majdur Union control panel</p></div><span id="connection" class="pill">Checking...</span></header>
+    <section class="status" id="serverStatus"><p>Loading bot status...</p></section>
+    <section class="chat" id="messages" aria-live="polite"></section>
+    <form id="chatForm" class="composer"><input id="messageInput" maxlength="256" autocomplete="off" placeholder="Message or dashboard command (!join, !leave, !say...)" required><button type="submit">Send</button></form>
+    <p class="hint">Dashboard commands: <code>!join</code> <code>!leave</code> <code>!reconnect</code> <code>!status</code> <code>!say hello</code> <code>!sit true</code> <code>!pass</code></p>
+  </main>
+  <script src="/public/js/dashboard.js" defer></script>
+</body></html>
